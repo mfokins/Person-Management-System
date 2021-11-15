@@ -1,0 +1,10 @@
+@page "/"
+
+<h1>Hello, user!</h1>
+
+Welcome to the adult management system. 
+<AuthorizeView>
+    <NotAuthorized>
+    Please proceed with <a href="/login">login</a>!
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,93 @@
+﻿@page "/AddAdult"
+@using Models
+@using Data
+@using Microsoft.AspNetCore.Components
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IAdultService AdultService;
+@inject NavigationManager NavigationManager
+
+
+<h3>Add Adult Person</h3>
+
+<AuthorizeView Policy="SecurityLevel1" Context="Auth">
+    <EditForm Model="@newAdultItem" OnValidSubmit="@AddNewAdult">
+        <ObjectGraphDataAnnotationsValidator/>
+        <ValidationSummary/>
+        <div class="form-group">
+            First Name:
+            <br/>
+            <InputText rows="1" @bind-Value="newAdultItem.FirstName"/>
+        </div>
+        <div class="form-group">
+            Last Name:
+            <br/>
+            <InputText rows="1" @bind-Value="newAdultItem.LastName"/>
+        </div>
+        <div class="form-group">
+            Gender:
+            <br/>
+            <InputSelect rows="1" @bind-Value="newAdultItem.Sex">
+                <option value="null">Select</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+                <option value="Other">Other</option>
+            </InputSelect>
+        </div>
+        <div class="form-group">
+            Age:
+            <br/>
+            <InputNumber rows="1" @bind-Value="newAdultItem.Age"/>
+        </div>
+
+        @* ------------------> Job item * <------------------*@
+        <div class="form-group">
+            Job title:
+            <br/>
+            <InputText rows="1" @bind-Value="newJobItem.JobTitle"/>
+        </div>
+        <div class="form-group">
+            Salary:
+            <br/>
+            <InputNumber rows="1" @bind-Value="newJobItem.Salary"/>
+        </div>
+        @* ------------------> Job item * <------------------*@
+
+        <div class="form-group">
+            Height:
+            <br/>
+            <InputNumber rows="1" @bind-Value="newAdultItem.Height"/>
+        </div>
+        <div class="form-group">
+            Wieght:
+            <br/>
+            <InputNumber rows="1" @bind-Value="newAdultItem.Weight"/>
+        </div>
+        <div class="form-group">
+            Hair Color:
+            <br/>
+            <InputText rows="1" @bind-Value="newAdultItem.HairColor"/>
+        </div>
+        <div class="form-group">
+            Eye color:
+            <br/>
+            <InputText rows="1" @bind-Value="newAdultItem.EyeColor"/>
+        </div>
+        <p class="actions">
+            <button class="btn btn-outline-dark" type="submit">Add to system</button>
+        </p>
+    </EditForm>
+</AuthorizeView>
+
+
+@code {
+    private Adult newAdultItem = new Adult();
+    private Job newJobItem = new Job();
+
+    private void AddNewAdult()
+    {
+        newAdultItem.JobTitle = newJobItem;
+        AdultService.AddAdultAsync(newAdultItem);
+        NavigationManager.NavigateTo("/Adults");
+    }
+
+}

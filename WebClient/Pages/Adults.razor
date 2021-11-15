@@ -1,0 +1,167 @@
+﻿@page "/Adults"
+@using Models
+@using Data
+@inject IAdultService AdultService
+@inject IUserService UserService
+@inject NavigationManager NavMgr
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView Policy="SecurityLevel1">
+            <h5 style="text-align: end"> As a user you can check statistics at <a href="/Genders">Genders</a> page </h5>
+        </AuthorizeView>
+
+<h3>Adults</h3>
+
+ <p>
+        Search:
+        <br/>
+        <input type="text" placeholder="Enter to search..." @bind="SearchParameter" @bind:event="oninput" @onkeyup="@ExecuteSearch" style="width:100px"/>
+    </p>
+
+@if (adultsToShow == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else if (!adultsToShow.Any())
+{
+    <p>
+        <em>No Adult listed. Please add some.</em>
+    </p>
+}
+else
+{
+   
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Adult ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Job</th>
+            <th>Salary</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Hair Color</th>
+            <th>Eye color</th>
+            <AuthorizeView Policy="SecurityLevel2">
+                <th>Remove</th>
+                <th>Edit</th>
+            </AuthorizeView>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach (var item in adultsToShow)
+
+        {
+            <tr>
+
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Sex</td>
+                <td>@item.Age</td>
+                <td>@item.JobTitle.JobTitle</td>
+                <td>@item.JobTitle.Salary</td>
+                <td>@item.Height</td>
+                <td>@item.Weight</td>
+                <td>@item.HairColor</td>
+                <td>@item.EyeColor</td>
+                <AuthorizeView Policy="SecurityLevel2">
+                    <td>
+                        <button @onclick="@(() => RemoveAdult(item.Id))">
+
+                            <i class="oi oi-trash" style="color: red"/>
+                        </button>
+                    </td>
+                    <td>
+
+                        <button @onclick="@(() => Edit(item.Id))">
+
+                            <i class="oi oi-pencil" style="color:#1b6ec2"/>
+                        </button>
+                    </td>
+                </AuthorizeView>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Adult> adultsToShow;
+    private IList<Adult> allAdults;
+
+    private string SearchParameter;  //TODO need to implement other way of filtering
+
+    private bool ObjectVisibility(Adult adult)
+    {
+        if (string.IsNullOrEmpty(SearchParameter))
+            return true;
+
+        if (adult.FirstName.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        if (adult.LastName.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+         // if (adult.JobTitle.JobTitle.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))  //Conflicting because there is "JobTitle" inside "JobTitle"
+         //    return true;
+
+        if (adult.HairColor.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        if (adult.EyeColor.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        if (adult.Id.ToString().StartsWith(SearchParameter) || adult.Age.ToString().StartsWith(SearchParameter))
+            return true;
+
+        if (adult.Weight.ToString().StartsWith(SearchParameter) || adult.Height.ToString().StartsWith(SearchParameter))
+            return true;
+
+        if (adult.JobTitle.Salary.ToString().StartsWith(SearchParameter))
+            return true;
+
+        return false;
+    }
+
+    private void ExecuteSearch()
+    {
+        IList<Adult> temp = new List<Adult>();
+        foreach (Adult adult in allAdults)
+        {
+            if (ObjectVisibility(adult))
+            {
+                temp.Add(adult);
+            }
+        }
+        adultsToShow = temp;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        allAdults = await AdultService.GetAllAdultsAsync();
+        adultsToShow = allAdults;
+    }
+
+    private void RemoveAdult(int id)
+    {
+        Adult adultToRemove = allAdults.First(t => t.Id == id);
+        AdultService.RemoveAdultAsync(id);
+        allAdults.Remove(adultToRemove);
+        adultsToShow.Remove(adultToRemove);
+    }
+
+    private void Edit(int id)
+    {
+        NavMgr.NavigateTo($"Edit/{id}");
+    }
+
+}

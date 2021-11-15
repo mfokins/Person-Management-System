@@ -1,0 +1,77 @@
+﻿@page "/Genders"
+@using Models
+@using Data
+@using C1.Chart
+@using C1.Blazor.Chart
+@inject IAdultService AdultService;
+@inject IUserService UserService
+@inject NavigationManager NavMgr
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@attribute [Authorize(Policy = "SecurityLevel1")]
+
+
+<FlexChart ItemsSource="GetGenders()" Binding="number" BindingX="gender" ChartType="ChartType.Bar" HeaderContent="Gender statistics" HeaderStyle="font-size:24px">
+    <SeriesCollection>
+        <Series Name="Number"/>
+    </SeriesCollection>
+</FlexChart>
+
+@code {
+
+    private IList<Adult> allAdults; //TODO make it work (need to implement WEB API methods to sort by gender)
+    private int Male;
+    private int Female;
+    private int Other;
+
+    protected override async Task OnInitializedAsync()
+    {
+        allAdults = await AdultService.GetAllAdultsAsync();
+        GetMaleNumber();
+        GetFemaleNumber();
+        GetOtherNumber();
+    }
+
+    private List<object> GetGenders()
+    {
+        return new List<object>
+        {
+            new
+            {
+                gender = "M",
+                number = Male,
+            },
+            new
+            {
+                gender = "F",
+                number = Female
+            },
+            new
+            {
+                gender = "Other",
+                number = Other
+            }
+        };
+    }
+
+    private void GetMaleNumber()
+    {
+        IList<Adult> count = allAdults.Where(adult => adult.Sex == "M").ToList();
+        int temp = count.Count;
+        Male = temp;
+    }
+
+    private void GetFemaleNumber()
+    {
+        IList<Adult> count = allAdults.Where(adult => adult.Sex == "F").ToList();
+        int temp = count.Count;
+        Female = temp;
+    }
+
+    private void GetOtherNumber()
+    {
+        IList<Adult> count = allAdults.Where(adult => adult.Sex == "Other").ToList();
+        int temp = count.Count;
+        Other = temp;
+    }
+
+}
