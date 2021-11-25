@@ -13,105 +13,105 @@ namespace WebClient.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 1 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 2 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 3 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 4 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 5 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 6 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 7 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 8 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 9 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using WebClient;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\_Imports.razor"
+#line 10 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\_Imports.razor"
 using WebClient.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 2 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
 using Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 3 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
 using Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 4 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
 using C1.Chart;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 5 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
 using C1.Blazor.Chart;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 10 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
            [Authorize(Policy = "SecurityLevel1")]
 
 #line default
@@ -126,7 +126,7 @@ using C1.Blazor.Chart;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\PersonManagement\WebClient\Pages\GendersChart.razor"
+#line 19 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
        
 
     private IList<Adult> allAdults; //TODO make it work (need to implement WEB API methods to sort by gender)

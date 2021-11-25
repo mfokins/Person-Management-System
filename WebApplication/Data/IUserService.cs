@@ -5,7 +5,6 @@ namespace WebApplication.Data
 {
     public interface IUserService
     {
-        Task<User> ValidateUser(string userName, string password);
-        // User GetUser(int userId);
+        Task<User> ValidateUserAsync(string userName, string password);
     }
 }

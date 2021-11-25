@@ -36,9 +36,9 @@ namespace WebApplication
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebApplication", Version = "v1"});
             });
-            services.AddSingleton<FileContext>();
-            services.AddScoped<IAdultService, AdultService>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddDbContext<AdultDBContext>();
+            services.AddScoped<IAdultService, AdultDBRepo>();
+            services.AddScoped<IUserService, UserDBRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

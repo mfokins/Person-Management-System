@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication.Data;
 using WebApplication.Models;
 
@@ -12,7 +13,7 @@ namespace WebApplication.Controllers
     [Route("[controller]")]
     public class AdultsController : ControllerBase
     {
-        private IAdultService adultService;
+        private readonly IAdultService adultService;
 
         public AdultsController(IAdultService adultService)
         {
@@ -20,16 +21,18 @@ namespace WebApplication.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IList<Adult>>> GetAdults([FromQuery] int? id)
+        //public async Task<ActionResult<IList<Adult>>> GetAdults([FromQuery] int? id)
+        public async Task<ActionResult<IList<Adult>>> GetAdults()
+
         {
             try
             {
                 IList<Adult> adults = await adultService.GetAllAdultsAsync();
 
-                if (id != null)  //filter by id
-                {
-                    adults = adults.Where(adult => adult.Id == id).ToList();
-                }
+                // if (id != null) //filter by id
+                // {
+                //     adults = adults.Where(adult => adult.Id == id).ToList();
+                // }
 
                 return Ok(adults);
             }
@@ -57,11 +60,11 @@ namespace WebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Adult>> AddAdult([FromBody] Adult todo)
+        public async Task<ActionResult<Adult>> AddAdult([FromBody] Adult adult)
         {
             try
             {
-                Adult added = await adultService.AddAdultAsync(todo);
+                Adult added = await adultService.AddAdultAsync(adult);
                 return Created($"/{added.Id}", added);
             }
             catch (Exception e)
@@ -70,23 +73,23 @@ namespace WebApplication.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        
+
         [HttpPatch]
         [Route("{id:int}")]
         public async Task<ActionResult<Adult>> UpdateAdult([FromBody] Adult adult)
         {
             try
-            {
-                Adult updatedTodo = await adultService.UpdateAsync(adult);
-                return Ok(updatedTodo);
+            { 
+                Adult updatedAdult = await adultService.UpdateAsync(adult);
+                return Ok(updatedAdult);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e); 
                 return StatusCode(500, e.Message);
             }
         }
-        
+
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<ActionResult> DeleteAdult([FromRoute] int id)
