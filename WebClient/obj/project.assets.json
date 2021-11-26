@@ -2,25 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "C1.Blazor.Chart/3.1.20212.106": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.4",
-          "Microsoft.AspNetCore.Components.Web": "3.1.4",
-          "Microsoft.TypeScript.MSBuild": "4.0.2",
-          "System.Drawing.Common": "4.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/C1.Blazor.Chart.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/C1.Blazor.Chart.dll": {}
-        },
-        "build": {
-          "build/C1.Blazor.Chart.props": {},
-          "buildTransitive/C1.Blazor.Chart.targets": {}
-        }
-      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -28,76 +9,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Authorization/3.1.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "3.1.4",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.4",
-          "Microsoft.Extensions.Options": "3.1.4"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components/3.1.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "3.1.4",
-          "Microsoft.AspNetCore.Components.Analyzers": "3.1.4",
-          "Microsoft.JSInterop": "3.1.4"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Analyzers/3.1.4": {
-        "type": "package",
-        "build": {
-          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Forms/3.1.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.4"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Web/3.1.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.4",
-          "Microsoft.AspNetCore.Components.Forms": "3.1.4",
-          "Microsoft.Extensions.DependencyInjection": "3.1.4",
-          "Microsoft.JSInterop": "3.1.4"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Metadata/3.1.4": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -341,49 +252,6 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.JSInterop/3.1.4": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {}
-        }
-      },
-      "Microsoft.NETCore.Platforms/3.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.TypeScript.MSBuild/4.0.2": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.TypeScript.MSBuild.props": {},
-          "build/Microsoft.TypeScript.MSBuild.targets": {}
-        }
-      },
-      "Microsoft.Win32.SystemEvents/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -514,29 +382,6 @@
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Drawing.Common/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "Microsoft.Win32.SystemEvents": "4.7.0"
-        },
-        "compile": {
-          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Drawing.Common.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -549,28 +394,6 @@
     }
   },
   "libraries": {
-    "C1.Blazor.Chart/3.1.20212.106": {
-      "sha512": "f/362Y0k7okgjPA/qhbJ/xMb2aXvBFr/BP202DY+OgsBZM7bd+3R/Pif/g0tczLl9KA6QAvOdfC+0F8w+H4MUQ==",
-      "type": "package",
-      "path": "c1.blazor.chart/3.1.20212.106",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/C1.Blazor.Chart.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "buildTransitive/C1.Blazor.Chart.targets",
-        "c1.blazor.chart.3.1.20212.106.nupkg.sha512",
-        "c1.blazor.chart.nuspec",
-        "docs/README.md",
-        "images/icon.png",
-        "lib/netstandard2.0/C1.Blazor.Chart.dll",
-        "lib/netstandard2.0/C1.Blazor.Chart.xml",
-        "license_EN.txt",
-        "staticwebassets/scripts.js",
-        "staticwebassets/scripts.js.map",
-        "staticwebassets/styles.css"
-      ]
-    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -585,107 +408,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Microsoft.AspNetCore.Authorization/3.1.4": {
-      "sha512": "uIHoOU15To1V1XbYwYHStke+gtKSormPtrgEqI9i8+kslM/0YJXraLPe1ygFZk+mH459s3Evns6QV1AZRcL90A==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.authorization/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.authorization.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components/3.1.4": {
-      "sha512": "C2NMPYO4k5LXh0GuoJiUyD5glWWRjWcIJe5x2DTbgLOLc1RZ0niE29AtDRTS3/GLKGYnkKgv7Z9NuGgVtTTWvg==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Analyzers/3.1.4": {
-      "sha512": "c8XT1jQdaYU8uhCflsr/1pR3G8oixptho6IZFObUFSwWeZ8MVAZCbI3W4Jeex39rEknwcz0cFth+eA5UISbClg==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.txt",
-        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
-        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.analyzers.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Forms/3.1.4": {
-      "sha512": "uz78GZoEh91g/xmy7RL+8CZAM5hPRbJhXbfTFc6BikvRBPgEU0Gx2T6NCGpnKnd+60jJuCbH3QL6BIQrC1PkMA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.forms.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Web/3.1.4": {
-      "sha512": "/t7ibFcyoXRDf5DE6Tx5evy+KQgaKzCGQeq8aiLR/4ujegUKWJVZaOxS+EwwZ44FEfWkyZTCZDGIdQyIdh5fZA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.web/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.web.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Metadata/3.1.4": {
-      "sha512": "8P2GHgUdyWf8MnxGsF4iXzcPaefvTT3sx9FhEBaw+QtcctAfja018wQTg0VC9nXodc9t/Dc+6lO3Ar68W9IKIQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.metadata/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.3.1.4.nupkg.sha512",
-        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1105,170 +827,6 @@
         "version.txt"
       ]
     },
-    "Microsoft.JSInterop/3.1.4": {
-      "sha512": "/H4UIvThzlF43mCOYF0ShQ+S9MulW5f3J0rScgTH34Tk+3gRyBa3lM3zntIBB+9/jyHki3V9c7EZmAzhMlezdg==",
-      "type": "package",
-      "path": "microsoft.jsinterop/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.JSInterop.dll",
-        "lib/netcoreapp3.1/Microsoft.JSInterop.xml",
-        "lib/netstandard2.0/Microsoft.JSInterop.dll",
-        "lib/netstandard2.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.3.1.4.nupkg.sha512",
-        "microsoft.jsinterop.nuspec"
-      ]
-    },
-    "Microsoft.NETCore.Platforms/3.1.0": {
-      "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
-      "type": "package",
-      "path": "microsoft.netcore.platforms/3.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "Microsoft.TypeScript.MSBuild/4.0.2": {
-      "sha512": "vLrqOLd1vpOD73rBVNejxiJQrIrK33p6uRpXSSIWWCr0qzLUiPg/uCQKAFeKr+R5c/W+cCDRtMBTDw3nVBgCbw==",
-      "type": "package",
-      "path": "microsoft.typescript.msbuild/4.0.2",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License.txt",
-        "build/Microsoft.TypeScript.MSBuild.props",
-        "build/Microsoft.TypeScript.MSBuild.targets",
-        "microsoft.typescript.msbuild.4.0.2.nupkg.sha512",
-        "microsoft.typescript.msbuild.nuspec",
-        "tools/Microsoft.TypeScript.Default.props",
-        "tools/Microsoft.TypeScript.targets",
-        "tools/net45/System.IO.FileSystem.Primitives.dll",
-        "tools/net45/System.IO.FileSystem.dll",
-        "tools/net45/TypeScript.Tasks.dll",
-        "tools/netstandard1.3/TypeScript.Tasks.dll",
-        "tools/tsc/cancellationToken.js",
-        "tools/tsc/cs/diagnosticMessages.generated.json",
-        "tools/tsc/de/diagnosticMessages.generated.json",
-        "tools/tsc/en/diagnosticMessages.generated.json",
-        "tools/tsc/es/diagnosticMessages.generated.json",
-        "tools/tsc/fr/diagnosticMessages.generated.json",
-        "tools/tsc/it/diagnosticMessages.generated.json",
-        "tools/tsc/ja/diagnosticMessages.generated.json",
-        "tools/tsc/ko/diagnosticMessages.generated.json",
-        "tools/tsc/lib.d.ts",
-        "tools/tsc/lib.dom.d.ts",
-        "tools/tsc/lib.dom.iterable.d.ts",
-        "tools/tsc/lib.es2015.collection.d.ts",
-        "tools/tsc/lib.es2015.core.d.ts",
-        "tools/tsc/lib.es2015.d.ts",
-        "tools/tsc/lib.es2015.generator.d.ts",
-        "tools/tsc/lib.es2015.iterable.d.ts",
-        "tools/tsc/lib.es2015.promise.d.ts",
-        "tools/tsc/lib.es2015.proxy.d.ts",
-        "tools/tsc/lib.es2015.reflect.d.ts",
-        "tools/tsc/lib.es2015.symbol.d.ts",
-        "tools/tsc/lib.es2015.symbol.wellknown.d.ts",
-        "tools/tsc/lib.es2016.array.include.d.ts",
-        "tools/tsc/lib.es2016.d.ts",
-        "tools/tsc/lib.es2016.full.d.ts",
-        "tools/tsc/lib.es2017.d.ts",
-        "tools/tsc/lib.es2017.full.d.ts",
-        "tools/tsc/lib.es2017.intl.d.ts",
-        "tools/tsc/lib.es2017.object.d.ts",
-        "tools/tsc/lib.es2017.sharedmemory.d.ts",
-        "tools/tsc/lib.es2017.string.d.ts",
-        "tools/tsc/lib.es2017.typedarrays.d.ts",
-        "tools/tsc/lib.es2018.asyncgenerator.d.ts",
-        "tools/tsc/lib.es2018.asynciterable.d.ts",
-        "tools/tsc/lib.es2018.d.ts",
-        "tools/tsc/lib.es2018.full.d.ts",
-        "tools/tsc/lib.es2018.intl.d.ts",
-        "tools/tsc/lib.es2018.promise.d.ts",
-        "tools/tsc/lib.es2018.regexp.d.ts",
-        "tools/tsc/lib.es2019.array.d.ts",
-        "tools/tsc/lib.es2019.d.ts",
-        "tools/tsc/lib.es2019.full.d.ts",
-        "tools/tsc/lib.es2019.object.d.ts",
-        "tools/tsc/lib.es2019.string.d.ts",
-        "tools/tsc/lib.es2019.symbol.d.ts",
-        "tools/tsc/lib.es2020.bigint.d.ts",
-        "tools/tsc/lib.es2020.d.ts",
-        "tools/tsc/lib.es2020.full.d.ts",
-        "tools/tsc/lib.es2020.intl.d.ts",
-        "tools/tsc/lib.es2020.promise.d.ts",
-        "tools/tsc/lib.es2020.string.d.ts",
-        "tools/tsc/lib.es2020.symbol.wellknown.d.ts",
-        "tools/tsc/lib.es5.d.ts",
-        "tools/tsc/lib.es6.d.ts",
-        "tools/tsc/lib.esnext.array.d.ts",
-        "tools/tsc/lib.esnext.asynciterable.d.ts",
-        "tools/tsc/lib.esnext.bigint.d.ts",
-        "tools/tsc/lib.esnext.d.ts",
-        "tools/tsc/lib.esnext.full.d.ts",
-        "tools/tsc/lib.esnext.intl.d.ts",
-        "tools/tsc/lib.esnext.promise.d.ts",
-        "tools/tsc/lib.esnext.string.d.ts",
-        "tools/tsc/lib.esnext.symbol.d.ts",
-        "tools/tsc/lib.scripthost.d.ts",
-        "tools/tsc/lib.webworker.d.ts",
-        "tools/tsc/lib.webworker.importscripts.d.ts",
-        "tools/tsc/node_modules/@microsoft/typescript-etw/bin/ia32/typescript-etw.node",
-        "tools/tsc/node_modules/@microsoft/typescript-etw/index.js",
-        "tools/tsc/node_modules/@microsoft/typescript-etw/package.json",
-        "tools/tsc/node_modules/source-map-support.js",
-        "tools/tsc/pl/diagnosticMessages.generated.json",
-        "tools/tsc/pt-BR/diagnosticMessages.generated.json",
-        "tools/tsc/ru/diagnosticMessages.generated.json",
-        "tools/tsc/tr/diagnosticMessages.generated.json",
-        "tools/tsc/tsc.js",
-        "tools/tsc/tsserver.js",
-        "tools/tsc/typesMap.json",
-        "tools/tsc/typingsInstaller.js",
-        "tools/tsc/watchGuard.js",
-        "tools/tsc/zh-CN/diagnosticMessages.generated.json",
-        "tools/tsc/zh-TW/diagnosticMessages.generated.json"
-      ]
-    },
-    "Microsoft.Win32.SystemEvents/4.7.0": {
-      "sha512": "mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
-      "type": "package",
-      "path": "microsoft.win32.systemevents/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Win32.SystemEvents.dll",
-        "lib/net461/Microsoft.Win32.SystemEvents.xml",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-        "microsoft.win32.systemevents.nuspec",
-        "ref/net461/Microsoft.Win32.SystemEvents.dll",
-        "ref/net461/Microsoft.Win32.SystemEvents.xml",
-        "ref/net472/Microsoft.Win32.SystemEvents.dll",
-        "ref/net472/Microsoft.Win32.SystemEvents.xml",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
       "sha512": "f5U8Sw0lRym8tTraJ2zm6OqcDrcrEVvcKDtYlKSLs3Ox9SerkwkPXiFXb/uiW0g2tJdUw6oBhsxI/l5DoRxXMg==",
       "type": "package",
@@ -1486,45 +1044,6 @@
         "version.txt"
       ]
     },
-    "System.Drawing.Common/4.7.0": {
-      "sha512": "v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
-      "type": "package",
-      "path": "system.drawing.common/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net461/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.xml",
-        "ref/netstandard2.0/System.Drawing.Common.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "system.drawing.common.4.7.0.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -1549,7 +1068,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "C1.Blazor.Chart >= 3.1.20212.106",
       "Microsoft.EntityFrameworkCore >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.11"
@@ -1592,10 +1110,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "C1.Blazor.Chart": {
-            "target": "Package",
-            "version": "[3.1.20212.106, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.11, )"

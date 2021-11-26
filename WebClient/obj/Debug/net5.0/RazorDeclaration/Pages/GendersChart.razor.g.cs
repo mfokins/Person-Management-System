@@ -97,20 +97,6 @@ using Data;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
-using C1.Chart;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
-using C1.Blazor.Chart;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 10 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\GendersChart.razor"
            [Authorize(Policy = "SecurityLevel1")]
 

@@ -75,7 +75,6 @@ C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bi
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\WebClient.pdb
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\WebClient.Views.dll
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\WebClient.Views.pdb
-C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\C1.Blazor.Chart.dll
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\Humanizer.dll
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
