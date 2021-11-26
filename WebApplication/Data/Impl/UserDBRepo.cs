@@ -17,17 +17,15 @@ namespace WebApplication.Data.Impl
 
             User user1 = new User
             {
+                UserName = "Admin",
                 Password = "123456",
-                SecurityLevel = 2,
-                UserId = 1,
-                UserName = "Admin"
+                SecurityLevel = 2
             };
             User user2 = new User
             {
+                UserName = "User",
                 Password = "123456",
-                SecurityLevel = 1,
-                UserId = 2,
-                UserName = "User"
+                SecurityLevel = 1
             };
 
             if (!ctx.Users.Any())

@@ -79,13 +79,13 @@ namespace WebApplication.Controllers
         public async Task<ActionResult<Adult>> UpdateAdult([FromBody] Adult adult)
         {
             try
-            { 
+            {
                 Adult updatedAdult = await adultService.UpdateAsync(adult);
                 return Ok(updatedAdult);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e); 
+                Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }
         }

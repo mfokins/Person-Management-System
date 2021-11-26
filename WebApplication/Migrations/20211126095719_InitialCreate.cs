@@ -26,7 +26,6 @@ namespace WebApplication.Migrations
                 {
                     UserName = table.Column<string>(type: "TEXT", nullable: false),
                     SecurityLevel = table.Column<int>(type: "INTEGER", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
                     Password = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
@@ -40,7 +39,7 @@ namespace WebApplication.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    JobID = table.Column<int>(type: "INTEGER", nullable: true),
+                    JobTitleJobID = table.Column<int>(type: "INTEGER", nullable: true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: false),
                     LastName = table.Column<string>(type: "TEXT", nullable: false),
                     HairColor = table.Column<string>(type: "TEXT", nullable: true),
@@ -54,17 +53,17 @@ namespace WebApplication.Migrations
                 {
                     table.PrimaryKey("PK_Adults", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Adults_Jobs_JobID",
-                        column: x => x.JobID,
+                        name: "FK_Adults_Jobs_JobTitleJobID",
+                        column: x => x.JobTitleJobID,
                         principalTable: "Jobs",
                         principalColumn: "JobID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Adults_JobID",
+                name: "IX_Adults_JobTitleJobID",
                 table: "Adults",
-                column: "JobID");
+                column: "JobTitleJobID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

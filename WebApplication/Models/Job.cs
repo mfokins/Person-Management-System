@@ -8,8 +8,7 @@ namespace WebApplication.Models
 {
     public class Job
     {
-        [ForeignKey("JobID")]
-        public int JobID { get; set; }
+        [ForeignKey("JobID")] public int JobID { get; set; }
         public string JobTitle { get; set; }
         public int Salary { get; set; }
     }

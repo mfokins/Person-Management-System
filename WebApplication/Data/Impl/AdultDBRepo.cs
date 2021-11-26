@@ -51,7 +51,7 @@ namespace WebApplication.Data.Impl
                 Height = 184,
                 Weight = 92,
                 Sex = "M",
-                Job = job1,
+                JobTitle = job1,
             };
             Adult adult2 = new Adult()
             {
@@ -63,7 +63,7 @@ namespace WebApplication.Data.Impl
                 Height = 178,
                 Weight = 62,
                 Sex = "F",
-                Job = job2,
+                JobTitle = job2,
             };
             Adult adult3 = new Adult()
             {
@@ -75,7 +75,7 @@ namespace WebApplication.Data.Impl
                 Height = 192,
                 Weight = 88,
                 Sex = "M",
-                Job = job3,
+                JobTitle = job3,
             };
             Adult adult4 = new Adult()
             {
@@ -87,7 +87,7 @@ namespace WebApplication.Data.Impl
                 Height = 174,
                 Weight = 52,
                 Sex = "Other",
-                Job = job4,
+                JobTitle = job4,
             };
 
 
@@ -103,7 +103,7 @@ namespace WebApplication.Data.Impl
 
         public async Task<IList<Adult>> GetAllAdultsAsync()
         {
-            return await ctx.Adults.Include(a => a.Job).ToListAsync();
+            return await ctx.Adults.Include(a => a.JobTitle).ToListAsync();
         }
 
         public async Task<Adult> AddAdultAsync(Adult adult)
@@ -115,9 +115,11 @@ namespace WebApplication.Data.Impl
 
         public async Task RemoveAdultAsync(int adultId)
         {
-            ctx.Jobs.Remove(await ctx.Jobs.FirstAsync(c => c.JobID.Equals(adultId)));
             ctx.Adults.Remove(await ctx.Adults.FirstAsync(c => c.Id.Equals(adultId)));
             await ctx.SaveChangesAsync();
+
+            //removing also job left behind in database
+            CleanupTheJobsTable();
         }
 
         public async Task<Adult> UpdateAsync(Adult adult)
@@ -126,6 +128,10 @@ namespace WebApplication.Data.Impl
             {
                 ctx.Update(adult);
                 await ctx.SaveChangesAsync();
+
+                //removing also job left behind in database
+                CleanupTheJobsTable();
+
                 return adult;
             }
             catch (Exception)
@@ -136,7 +142,23 @@ namespace WebApplication.Data.Impl
 
         public async Task<Adult> GetAdultAsync(int id)
         {
-            return await ctx.Adults.Include(a => a.Job).FirstAsync(t => t.Id == id);
+            return await ctx.Adults.Include(a => a.JobTitle).FirstAsync(t => t.Id == id);
+        }
+
+        private async void CleanupTheJobsTable()
+        {
+            //Method is removing previous jobs left behind in database
+            //(Update method suddenly populates the table and this method purpose is to clean it up)
+
+            foreach (Job job in ctx.Jobs)
+            {
+                if (!ctx.Adults.Any(a => a.JobTitle.JobID == job.JobID))
+                {
+                    ctx.Jobs.Remove(job);
+                }
+            }
+
+            await ctx.SaveChangesAsync();
         }
     }
 }

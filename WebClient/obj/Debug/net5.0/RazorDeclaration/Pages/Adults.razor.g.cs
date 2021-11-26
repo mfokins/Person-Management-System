@@ -105,7 +105,7 @@ using Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 97 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\Adults.razor"
+#line 98 "C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\Pages\Adults.razor"
        
     private IList<Adult> adultsToShow;
     private IList<Adult> allAdults;

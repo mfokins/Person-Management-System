@@ -7,7 +7,6 @@ namespace WebApplication.Models
     {
         [JsonPropertyName("UserName"), Key] public string UserName { get; set; }
         [JsonPropertyName("SecurityLevel")] public int SecurityLevel { get; set; }
-        [JsonPropertyName("UserId")] public int UserId { get; set; }
         [JsonPropertyName("Password")] public string Password { get; set; }
     }
 }

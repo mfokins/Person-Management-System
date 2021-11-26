@@ -4,9 +4,7 @@ namespace WebClient.Models
 {
     public class Job
     {
-        [JsonPropertyName("JobTitle")]
-      public string JobTitle { get; set; }
-        [JsonPropertyName("Salary")]
+        public string JobTitle { get; set; }
         public int Salary { get; set; }
     }
 }

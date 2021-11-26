@@ -33,26 +33,36 @@
     private string password;
     private string errorMessage;
 
-    public async Task PerformLogin() {
+    public async Task PerformLogin()
+    {
         errorMessage = "";
-        try {
+        try
+        {
             await ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
             username = "";
             password = "";
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             errorMessage = e.Message;
             Console.WriteLine("Login error: " + e);
         }
     }
 
-    public async Task PerformLogout() {
+    public async Task PerformLogout()
+    {
         errorMessage = "";
         username = "";
         password = "";
-        try {
+        try
+        {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
             NavigationManager.NavigateTo("/");
-        } catch (Exception e) { Console.WriteLine("Logout error: " + e);}
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Logout error: " + e);
+        }
     }
 
 }

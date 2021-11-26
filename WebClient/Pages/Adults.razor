@@ -6,17 +6,18 @@
 @inject NavigationManager NavMgr
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
-<AuthorizeView Policy="SecurityLevel1">
+@*<AuthorizeView Policy="SecurityLevel1">
             <h5 style="text-align: end"> As a user you can check statistics at <a href="/Genders">Genders</a> page </h5>
-        </AuthorizeView>
+        </AuthorizeView>  *@
+@* TODO find alternative for C1 charts since license has expired and made viewing charts unavailable *@
 
 <h3>Adults</h3>
 
- <p>
-        Search:
-        <br/>
-        <input type="text" placeholder="Enter to search..." @bind="SearchParameter" @bind:event="oninput" @onkeyup="@ExecuteSearch" style="width:100px"/>
-    </p>
+<p>
+    Search:
+    <br/>
+    <input type="text" placeholder="Enter to search..." @bind="SearchParameter" @bind:event="oninput" @onkeyup="@ExecuteSearch" style="width:100px"/>
+</p>
 
 @if (adultsToShow == null)
 {
@@ -32,9 +33,6 @@ else if (!adultsToShow.Any())
 }
 else
 {
-   
-
-
     <table class="table">
         <thead>
         <tr>
@@ -44,7 +42,7 @@ else
             <th>Gender</th>
             <th>Age</th>
             <th>Job</th>
-            <th>Salary</th> 
+            <th>Salary</th>
             <th>Height</th>
             <th>Weight</th>
             <th>Hair Color</th>
@@ -67,8 +65,8 @@ else
                 <td>@item.LastName</td>
                 <td>@item.Sex</td>
                 <td>@item.Age</td>
-               @* <td>@item.JobTitle.JobTitle</td>
-                <td>@item.JobTitle.Salary</td> *@
+                <td>@item.JobTitle.JobTitle</td>
+                <td>@item.JobTitle.Salary</td>
                 <td>@item.Height</td>
                 <td>@item.Weight</td>
                 <td>@item.HairColor</td>
@@ -98,7 +96,7 @@ else
     private IList<Adult> adultsToShow;
     private IList<Adult> allAdults;
 
-    private string SearchParameter;  //TODO need to implement other way of filtering
+    private string SearchParameter; //TODO need to implement other way of filtering
 
     private bool ObjectVisibility(Adult adult)
     {
@@ -111,8 +109,8 @@ else
         if (adult.LastName.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
             return true;
 
-         // if (adult.JobTitle.JobTitle.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))  //Conflicting because there is "JobTitle" inside "JobTitle"
-         //    return true;
+    // if (adult.JobTitle.JobTitle.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))  //Conflicting because there is "JobTitle" inside "JobTitle"
+    //    return true;
 
         if (adult.HairColor.Contains(SearchParameter, StringComparison.OrdinalIgnoreCase))
             return true;

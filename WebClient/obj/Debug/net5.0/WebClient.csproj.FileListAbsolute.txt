@@ -115,7 +115,6 @@ C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\ob
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\Adults.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\Edit.razor.g.cs
-C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\GendersChart.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
@@ -133,7 +132,6 @@ C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\ob
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\Adults.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\Edit.razor.g.cs
-C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\GendersChart.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\MySpace\Disk D\SEMESTER3\DNPAssignment3\Person-Management-System\WebClient\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs

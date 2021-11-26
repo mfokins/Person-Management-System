@@ -22,7 +22,10 @@ namespace WebClient.Data.Impl
         {
             Task<string> stringAsync = client.GetStringAsync(uri + "/Adults");
             string message = await stringAsync;
-            List<Adult> result = JsonSerializer.Deserialize<List<Adult>>(message);
+            List<Adult> result = JsonSerializer.Deserialize<List<Adult>>(message, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
             return result;
         }
 
@@ -53,7 +56,10 @@ namespace WebClient.Data.Impl
         {
             Task<string> stringAsync = client.GetStringAsync($"{uri}/Adults/{id}");
             string message = await stringAsync;
-            Adult result = JsonSerializer.Deserialize<Adult>(message);
+            Adult result = JsonSerializer.Deserialize<Adult>(message, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
             return result;
         }
     }

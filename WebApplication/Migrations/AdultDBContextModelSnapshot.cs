@@ -38,7 +38,7 @@ namespace WebApplication.Migrations
                     b.Property<int>("Height")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("JobID")
+                    b.Property<int?>("JobTitleJobID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
@@ -54,7 +54,7 @@ namespace WebApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("JobID");
+                    b.HasIndex("JobTitleJobID");
 
                     b.ToTable("Adults");
                 });
@@ -87,9 +87,6 @@ namespace WebApplication.Migrations
                     b.Property<int>("SecurityLevel")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("UserName");
 
                     b.ToTable("Users");
@@ -97,11 +94,11 @@ namespace WebApplication.Migrations
 
             modelBuilder.Entity("WebApplication.Models.Adult", b =>
                 {
-                    b.HasOne("WebApplication.Models.Job", "Job")
+                    b.HasOne("WebApplication.Models.Job", "JobTitle")
                         .WithMany()
-                        .HasForeignKey("JobID");
+                        .HasForeignKey("JobTitleJobID");
 
-                    b.Navigation("Job");
+                    b.Navigation("JobTitle");
                 });
 #pragma warning restore 612, 618
         }
